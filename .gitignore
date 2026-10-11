@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.marimo/
+.env
+results/night1.jsonl
+results/vault/
+*.parquet
+scripts/remote/ship_package.py

@@ -1,0 +1,22 @@
+[project]
+name = "tsfm-audit"
+version = "0.1.0"
+description = "Do Time-Series Foundation Models Read Their Covariates? Benchmark-wide covariate-reliance audit."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.24", "pandas>=2.0", "scikit-learn>=1.3"]
+
+[project.optional-dependencies]
+demo = ["matplotlib>=3.7", "pytest>=7.0"]
+full = ["matplotlib>=3.7", "pytest>=7.0", "fev", "datasets", "torch", "transformers", "huggingface-hub"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
