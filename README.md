@@ -104,13 +104,19 @@ See `paper/outline.md` for the Night-1 / Night-2 schedule and `src/tsfm_audit/ad
 
 Position vs concurrent work: Won (shuffle gain, 3 models), Berthelier et al. (planted same-time, 2 models), t0 (shift/perm on 1 task) — cite & contrast; we do benchmark-wide + dose-response. Term: **"covariate reliance" / "swap gap"** (not "dependence" — Pan & Ezzat use that for with-vs-without).
 
+## Results (10 models × 46 fev-bench covariate tasks)
+
+![Swap gap per model per domain](results/study2_reliance_by_domain.png)
+![With-vs-without covariates on rohlik](results/study2_feature_distraction_rohlik.png)
+
+Headlines: reliance spans two orders of magnitude by task (energy +1.5 → retail ~0.00); accuracy decouples from reliance (TimesFM-3 wins rossmann yet is *harmed* by covariates on rohlik, 0.92 vs 0.79 univariate); three blind controls read exactly 0.000 in 70+ cells. Full numbers in `paper/draft.md`.
+
 ## Roadmap to impactful + hireable
 
 1. [x] Harness + planted demo (this week, no GPU) → portfolio-ready repo
-2. [ ] fev-bench-mini (20 tasks) smoke test, 1 model → `numbers.tex` draft
-3. [ ] Night 1: 6+ models × 46 tasks × 3 cond × 3 seeds → Figure 1 (reliance per model + ceiling)
-4. [ ] Night 2: ceiling regression + GIFT-Eval context probe → Table 1
-5. [ ] arXiv post immediately, then ICLR 2027 workshop submit
+2. [x] Full sweep: 10 models × 46 tasks × 3 cond × multi-seed → banked results
+3. [x] Ceiling regression + capture fractions → `paper/draft.md`
+4. [ ] Red-pen review + citation check → arXiv post, then ICLR 2027 workshop submit
 
 Recruiters / collaborators: the demo + tests run anywhere. The full sweep is a single command. Paper outline maps 1:1 to code outputs.
 
