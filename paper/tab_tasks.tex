@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{@{}lp{0.9cm}p{0.8cm}p{6.0cm}p{3.3cm}c@{}}
+\toprule
+Task (count) & Proto. & Seeds & Top readers, $\Delta$MASE & Near-zero / negative & Best intact \\
+\midrule
+EPF price (5) & xwin & 2 & TabPFN $+1.47$, C2-synth $+0.98$, TFM2.5 $+0.87$, C2 $+0.83$, $t_0$ $+0.77$, TFM3 $+0.52$ & --- & C2 $1.35$ \\
+ProEnFo (4) & xwin & 2 & C2 $+0.58$, C2-synth $+0.52$, TFM3 $+0.43$ & Toto $+0.005$ & TFM3 $0.67$ \\
+UCI air (2) & xwin & 2 & C2 $+0.34$, C2-synth $+0.26$, TFM3 $+0.13$ & --- & TFM3 $1.62$ \\
+Solar (2) & xwin & 2 & TFM3 $+0.18$, C2-synth $+0.15$ & --- & TFM3 $0.91$ \\
+Rohlik (3) & series & 2--3 & C2-synth $+0.051$, C2 $+0.047$ & TFM3 $-0.067$, Toto $-0.018$ & C2 $0.61$ \\
+UK COVID (4) & series & 2--3 & Toto $+0.055$, C2 $+0.048$ & TFM2.5 $0.00^{\dagger}$ & Toto $1.34$ \\
+Rossmann (2) & series & 3 & $+0.002$ to $+0.020$ & $\approx$ all & TFM3 $0.28/0.21$ \\
+Restaurant (1) & series & 2 & --- & all $0.000$ & --- \\
+\bottomrule
+\end{tabular}
+\caption{Reliance by task group. C2 is Chronos-2, TFM3/2.5 are TimesFM-3.0/2.5,
+C2-synth is the Chronos-2 synthetic variant. xwin = cross-window derangement for
+single-series tasks; series = cross-series derangement. $\dagger$: TimesFM-2.5
+needs known-future covariates, which UK COVID does not declare. Seed means; best
+intact is the lowest intact MASE on the group. Five cells re-measured with five seeds
+each are in Table~\ref{tab:seedspread}; covariate-blind
+controls are bit-identical at $0.000$ across seeds rather than merely close.
+Per-cell values are tabulated in the supplementary \texttt{reported\_gaps.csv}.}
+\label{tab:tasks}
+\end{table*}

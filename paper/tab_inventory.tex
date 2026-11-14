@@ -1,0 +1,39 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{tabular}{@{}llllc@{\hspace{1.2em}}llllc@{}}
+\toprule
+Chunk & Task & Proto. & Seeds & Sub. & Chunk & Task & Proto. & Seeds & Sub. \\
+\midrule
+F1 & \texttt{proenfo\_gfc12} & xwin & 0,1 & -- & F5 & \texttt{m5\_1D} & series & 0,1 & 64 \\
+F1 & \texttt{proenfo\_gfc17} & xwin & 0,1 & -- & F5 & \texttt{m5\_1W} & series & 0,1 & 64 \\
+F0b & \texttt{epf\_np} & xwin & 0,1 & -- & F5 & \texttt{m5\_1M} & series & 0,1 & 64 \\
+F0b & \texttt{solar\_with\_weather\_1H} & xwin & 0,1 & -- & F6 & \texttt{favorita\_stores\_1D} & series & 0,1 & 64 \\
+F0b & \texttt{uci\_air\_quality\_1H} & xwin & 0,1 & -- & F6 & \texttt{favorita\_stores\_1W} & series & 0,1 & 64 \\
+F0b & \texttt{proenfo\_gfc14} & xwin & 0,1 & -- & F6 & \texttt{favorita\_stores\_1M} & series & 0,1 & 64 \\
+F2 & \texttt{rohlik\_sales\_1D} & series & 0,1 & 64 & F6 & \texttt{favorita\_trans.\_1D} & series & 0,1 & 64 \\
+F2 & \texttt{rohlik\_sales\_1W} & series & 0,1 & 64 & F6 & \texttt{favorita\_trans.\_1W} & series & 0,1 & 64 \\
+F2 & \texttt{rohlik\_orders\_1W} & series & 0,1 & 64 & F6 & \texttt{favorita\_trans.\_1M} & series & 0,1 & 64 \\
+F2 & \texttt{uk\_covid\_1D/new} & series & 0,1 & 64 & F7 & \texttt{solar\_with\_weather\_15T} & xwin & 0,1 & -- \\
+F2 & \texttt{uk\_covid\_1W/new} & series & 0,1 & 64 & F7 & \texttt{uci\_air\_quality\_1D} & xwin & 0,1 & -- \\
+F2 & \texttt{uk\_covid\_1W/cum.} & series & 0,1 & 64 & F8 & \texttt{kdd\_cup\_2022\_10T} & series & 0,1 & 64 \\
+F0a & \texttt{rohlik\_orders\_1D} & series & 0,1,2 & 32 & F8 & \texttt{kdd\_cup\_2022\_30T} & series & 0,1 & 64 \\
+F0a & \texttt{rossmann\_1W} & series & 0,1,2 & 32 & F8 & \texttt{kdd\_cup\_2022\_1D} & series & 0,1 & 64 \\
+F0a & \texttt{rossmann\_1D} & series & 0,1,2 & 32 & F8 & \texttt{redset\_5T} & series & 0,1 & 64 \\
+F0a & \texttt{uk\_covid\_1D/cum.} & series & 0,1,2 & 32 & F8 & \texttt{redset\_15T} & series & 0,1 & 64 \\
+F3 & \texttt{entsoe\_15T} & xwin & 0,1 & -- & F8 & \texttt{redset\_1H} & series & 0,1 & 64 \\
+F3 & \texttt{entsoe\_30T} & xwin & 0,1 & -- & F8 & \texttt{gvar} & series & 0,1 & 64 \\
+F3 & \texttt{entsoe\_1H} & xwin & 0,1 & -- & F9 & \texttt{fred\_md\_2025/cee} & xwin & 0,1 & -- \\
+F3 & \texttt{epf\_be} & xwin & 0,1 & -- & F9 & \texttt{fred\_qd\_2025/cee} & xwin & 0,1 & -- \\
+F3 & \texttt{epf\_de} & xwin & 0,1 & -- & F4 & \texttt{restaurant} & series & 0,1 & 64 \\
+F3 & \texttt{epf\_fr} & xwin & 0,1 & -- & F4 & \texttt{hermes} & series & 0,1 & 64 \\
+F3 & \texttt{epf\_pjm} & xwin & 0,1 & -- & F4 & \texttt{walmart} & series & 0,1 & 64 \\
+\bottomrule
+\end{tabular}
+\caption{The 46 fev-bench covariate tasks. Protocol: \texttt{series} = cross-series
+derangement, \texttt{xwin} = cross-window derangement. \texttt{F0a}/\texttt{F0b} are
+backfill chunks (extra seeds). Sub. = per-chunk series subsample; \texttt{--} means all
+series. Multivariate tasks are probed on their first target. \texttt{cum.} =
+cumulative; \texttt{trans.} = transactions.}
+\label{tab:inventory}
+\end{table*}

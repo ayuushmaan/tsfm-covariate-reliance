@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}llrrl@{}}
+\toprule
+Model & Task & Intact & $\Delta$ & Reading \\
+\midrule
+TFM3 & rossmann\_1D & $0.278$ & $\approx0$ & wins without covariates \\
+TFM3 & solar\_1H & $0.907$ & $+0.18$ & wins mostly without \\
+TFM3 & rohlik\_1D & $0.924$ & $-0.067$ & harmed (uni.\ $0.792$) \\
+Toto & uk\_covid & $1.36$ & $+0.06$ & best reader; TiRex $1.04$ wins \\
+TabPFN & EPF & $1.79$ & $+1.47$ & strongest reader overall \\
+TabPFN & rohlik & --- & $\approx0$ & flat despite accuracy \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy and reliance dissociate. TFM3 = TimesFM-3.0; Toto = Toto 1.0;
+TabPFN = TabPFN-TS. ``uni.'' is the separately-run univariate variant on Rohlik.}
+\label{tab:decoupling}
+\end{table}

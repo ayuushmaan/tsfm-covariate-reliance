@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{tabular}{@{}p{2.2cm}p{3.1cm}p{1.5cm}p{2.2cm}p{2.6cm}p{3.0cm}@{}}
+\toprule
+Work & Intervention & Models & Tasks & Calibration & Zero-controls \\
+\midrule
+fev-bench \citep{shchur2025fev} & with vs.\ without covariates & 30+ & 46 of 100 & none & none \\
+Berthelier et al.\ \citep{berthelier2026investigating} & planted relations (identity, sum, aggregate, quadratic) & 2 & synthetic + real & none & not reported \\
+Won \citep{won2026attenuated} & shuffle gain; exact counterfactual inputs & 3 & forced systems; 4 plants & exact counterfactuals & implicit (shuffle of an input-ignoring model is 0) \\
+$t_0$ report \citep{meyer2026t0} & with vs.\ without covariates & 1 family & 30 & none & not reported \\
+\textbf{Ours} & swap across series or windows; time permutation & \textbf{10} & \textbf{all 46} & \textbf{planted $\beta$ dose-response; linear reference} & \textbf{3 blind models + naive, 70+ cells} \\
+\bottomrule
+\end{tabular}
+\caption{Closest prior probes. The distinguishing combination is benchmark-wide scope
+with a calibrated instrument and explicit zero-controls; each individual ingredient
+appears in earlier work.}
+\label{tab:positioning}
+\end{table*}

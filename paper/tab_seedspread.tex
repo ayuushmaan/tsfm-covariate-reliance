@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Cell & Mean & SD & Min & Max & Intact \\
+\midrule
+EPF (\texttt{np}), C2 & $0.880$ & $0.094$ & $0.772$ & $1.023$ & $1.350$ \\
+ProEnFo \texttt{gfc12}, C2 & $0.291$ & $0.130$ & $0.093$ & $0.415$ & $1.875$ \\
+UCI air 1D, C2 & $0.086$ & $0.026$ & $0.062$ & $0.130$ & $1.129$ \\
+Rohlik sales 1D, C2 & $0.057$ & $0.010$ & $0.044$ & $0.071$ & $3.529$ \\
+UK COVID 1D new, C2 & $-0.021$ & $0.010$ & $-0.031$ & $-0.013$ & $0.639$ \\
+\midrule
+all five, Bolt control & $0.000$ & $0.000$ & $0.000$ & $0.000$ & --- \\
+\bottomrule
+\end{tabular}
+\caption{Corruption-draw variance: five swap seeds per cell, re-run end-to-end
+in a fresh environment. Intact MASE is bit-identical across the five seeds, so
+SD (sample, $n=5$) is the spread induced by the corruption draw alone.
+EPF/Chronos-2 reproduces the original intact MASE ($1.3499$) and group gap.
+Bolt drops covariates and reads exactly $0.000$ in all 25 control runs.
+Per-seed rows: supplementary \texttt{seed\_spread\_5seed.csv}.}
+\label{tab:seedspread}
+\end{table}

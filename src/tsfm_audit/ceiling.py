@@ -1,8 +1,8 @@
 """Ceiling v3: DIRECT multi-output ridge (no iteration, no divergence).
 
 Per-series ridge mapping fixed history features (own lags + covariate lags,
-incl. seasonal 24/168 when history allows) directly to all H future steps.
-Fit on sliding windows of the past; applied once at the cutoff.
+with KNOWN future values entering at target time) directly to each future
+step. Fit on sliding windows of the past; one RidgeCV per horizon step.
 """
 from __future__ import annotations
 

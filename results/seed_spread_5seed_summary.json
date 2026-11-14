@@ -1,0 +1,13 @@
+{
+  "description": "Five-seed corruption-draw spread for five headline cells, re-run end-to-end in a fresh environment on 2026-11-14 (RTX PRO 6000, Python 3.13.11, fev 0.10.0, chronos-forecasting 2.3.2, torch 2.11.0, transformers 5.14.1, numpy 2.4.6, pandas 3.0.3). Intact MASE is seed-invariant; sd is the sample standard deviation (n=5) of the swap gap.",
+  "rows": 50,
+  "cells": 10,
+  "summary": {
+    "chronos2|epf_np/xwin": {"n": 5, "gap_mean": 0.880296, "gap_sd": 0.093812, "gap_min": 0.771887, "gap_max": 1.022796, "intact_mase": 1.349925},
+    "chronos2|proenfo_gfc12/xwin": {"n": 5, "gap_mean": 0.290626, "gap_sd": 0.129936, "gap_min": 0.093195, "gap_max": 0.415249, "intact_mase": 1.874629},
+    "chronos2|uci_air_quality_1D/xwin|multi4": {"n": 5, "gap_mean": 0.085690, "gap_sd": 0.025924, "gap_min": 0.062403, "gap_max": 0.129740, "intact_mase": 1.129281},
+    "chronos2|rohlik_sales_1D/w0": {"n": 5, "gap_mean": 0.057376, "gap_sd": 0.009708, "gap_min": 0.043822, "gap_max": 0.070725, "intact_mase": 3.529431},
+    "chronos2|uk_covid_nation_1D/new/w0|multi3": {"n": 5, "gap_mean": -0.020590, "gap_sd": 0.009681, "gap_min": -0.031116, "gap_max": -0.012612, "intact_mase": 0.638803},
+    "bolt|all_five_cells": {"n": 25, "gap_mean": 0.0, "gap_sd": 0.0, "gap_min": 0.0, "gap_max": 0.0}
+  }
+}
